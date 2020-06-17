@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: 416
 
       - name: Space cleanup
         env:
@@ -49,8 +49,8 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Generate configuration file
-        run: make defconfig
+#       - name: Generate configuration file
+#         run: make defconfig
 
       - name: Make download
         run: |
